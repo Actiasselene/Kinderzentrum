@@ -1,0 +1,236 @@
+
+
+@font-face {
+  font-family: Asap;
+  font-style: bold;
+  font-weight: 800;
+   src: url("assets/fonts/Asap-Bold.ttf");
+   font-display: swap;
+ }
+
+ @font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+   src: url("assets/fonts/Roboto-Regular.ttf");
+   font-display: swap;
+ }
+
+ body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9ece4;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f9ece4;
+  border-bottom: 2px solid #c9a68952;
+  z-index: 1000;
+  padding: 10px 0;
+  font-family: 'Asap', sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+header h3 {
+  font-family: 'Asap', sans-serif;
+  color: #7e5b59;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 20px;
+  
+}
+
+
+
+
+.welcome {
+  display: flex;
+  
+  justify-content: space-between;
+  padding: 100px 0 20px 0;
+}
+
+
+
+    .left-column {
+      display: flex;
+       background-size: auto;
+      margin: 0;
+      width: 45%;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;  
+    }
+
+ 
+         
+      .right-column {
+        display: flex;
+        
+        flex-direction: column;
+        padding: 40px 40px 60px 40px;
+        width: 55%;
+        
+      }
+
+      .right-column h1 {
+        font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        text-align: center;   
+        font-size: 38px;
+        color: #7e5b59;
+
+      }
+
+      .right-column p {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #68594d;
+        text-align: center;
+        line-height: 35px;  
+      }
+
+
+      .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      
+      
+      
+     
+      }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0; 
+
+
+    }
+
+
+    .button {
+      margin: 40px 0;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+    
+    button {
+      border-radius: 10px;
+      border: none;
+      background-color: #c49f81;
+      padding: 15px 45px;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+
+  .button a:after {
+    background-color: #c49f81; 
+
+  }
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icons a:after {
+  
+    display: block;
+    position: absolute;
+    left: 0; 
+    width: 0;
+    height: 2px; 
+    background-color: #ffffff; 
+    content: "";
+    transition: width 0.3s ease-out; 
+  }
+
+.icons img {
+  margin: 0 15px;
+}
+
+   
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav h3 {
+    margin: 10px 0;
+  }
+
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-column {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.left-column iframe {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+.icons-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  text-align: center;
+  
+}
+
+.icons-column a:after {
+  
+  left: 0; 
+  width: 0;
+  height: 2px; 
+  background-color: #ffffff; 
+  content: "";
+  transition: width 0.3s ease-out; 
+}
+
+.icons-column a {
+  padding-bottom: 20px;
+ 
+}
+
+.icons-item  {
+  
+  display: inline-block;
+  position: relative;
+  padding-bottom: 15px;
+
+}
+
+.icons-item img {
+  margin-left: -370px;
+}
+
+.icons-item p {
+  position: absolute;
+ margin-top: -50px;
+  margin-left: 370px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #68594d;
+}

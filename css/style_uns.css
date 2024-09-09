@@ -1,0 +1,140 @@
+
+  @font-face {
+    font-family: Asap;
+    font-style: bold;
+    font-weight: 800;
+     src: url("assets/fonts/Asap-Bold.ttf");
+     font-display: swap;
+   }
+  
+   @font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+     src: url("assets/fonts/Roboto-Regular.ttf");
+     font-display: swap;
+   }
+  
+   body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9ece4;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f9ece4;
+    border-bottom: 2px solid #c9a68952;
+    z-index: 1000;
+    padding: 10px 0;
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    line-height: 50px;
+  }
+  
+  header h3 {
+    font-family: 'Asap', sans-serif;
+    color: #7e5b59;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 20px;
+    
+  }
+  
+
+  .welcome {
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 100px 0 20px 0;
+  }
+  
+  
+  .left-column img {
+
+    display: block;
+    margin: 0 auto; 
+    padding-top: 30px;
+  }
+      
+
+
+      .left-column {
+        display: flex;
+        flex-direction: column; 
+        width: 45%;
+        
+      }
+
+      .right-column {
+        display: flex;
+        
+        flex-direction: column;
+        padding: 40px 40px 40px 40px;
+        width: 55%;
+        
+      }
+
+      .right-column h1 {
+        font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        text-align: center;   
+        font-size: 38px;
+        color: #7e5b59;
+
+      }
+
+      .right-column p {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #68594d;
+        text-align: center;
+        line-height: 35px;  
+      }
+
+
+   
+
+
+   
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav h3 {
+    margin: 10px 0;
+  }
+
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-column {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+    
