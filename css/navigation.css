@@ -1,93 +1,133 @@
 
-@font-face {
-    font-family: Asap;
-    font-style: normal;
-    font-weight: 500;
-     src: url("assets/fonts/Asap-VariableFont_wdth,wght.ttf");
-     font-display: swap;
-   }
 
+/* Основные стили для гамбургер-меню */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding-left: 20px;
+  padding-top: 10px;
+}
 
-a {
-	position: relative;
-    text-decoration: none;
-	color: #7e5b59;
-	cursor: pointer;
-	line-height: 1; 
-	text-decoration: none; 
-    font-weight: bold;
-    padding-top: 20px;
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #7e5b59;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Стиль для навигационного меню */
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Убедитесь, что меню занимает ровно 100% ширины экрана */
+  z-index: 999; /* Зафиксируйте меню наверху всех остальных элементов */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9ece4;
+  padding: 10px 20px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: none;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0 10px;
+}
+
+.active {
+ 
+  color: #949090;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
 
 }
 
 
-a:after {
-	display: block;
-	position: absolute;
-	left: 0; 
-	width: 0;
-	height: 2px; 
-	background-color: #c9b0a8; 
-	content: "";
-	transition: width 0.3s ease-out; 
-}
 
-a:hover:after,
-a:focus:after {
-	width: 100%; 
+.nav a {
+  text-decoration: none;
+  color: #7e5b59;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
 }
 
 .nav a:hover {
-    text-decoration: none;
-    color:#c9b0a8;
-  }
-    
-
-      header h3 {
-        padding-left: 40px;
-        font-size: 18px;
-        line-height: 50px;
-        color: #c49f81; 
-      }
-
-.active {
-  color: #c9b0a8;
+  background-color: #9e8177;
+  color: #fff;
 }
- 
-
-
-
-.nav {
-    display: flex;
-    position: fixed;
-    top: 0; /* Зафиксировать навигацию наверху */
-    left: 0;
-    right: 0; /* Вместо фиксированной ширины */
-    background-color: #f9ece4;
-    border-bottom: 2px solid #c9a68952;
-    width: 100%; /* Адаптивная ширина */
-    height: 100px;
-    max-width: inherit; /* Максимальная ширина, если требуется */
-    margin: 0 auto; /* Центрирование */
-    flex-direction: row;
-    justify-content: flex-end;
-    z-index: 1000; /* Чтобы навигация была над остальным содержимым */
-    padding: 10px 80px; /* Внутренний отступ для навигации */
-  }
-
-      .nav img {
-        margin-top: 25px;
-        margin-left: 50px;
-      }
 
 .language {
-    margin-left: 50px;
-    margin-right: 20px;
-    margin-top: 0px;
-    
-  }
-    
-      
+  margin-left: auto;
+  
+}
 
-     
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 10px;
+    height: auto;
+    width: 100%;
+    background-color: #f9ece4;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .language img {
+    align-items: center;
+    
+
+  }
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav li {
+    margin: 20px 0;
+  }
+
+  .hamburger.bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.bar2 {
+    opacity: 0;
+  }
+
+  .hamburger.bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
